@@ -5,8 +5,8 @@
  */
 
 import React, { Component } from 'react';
-import { StyleSheet, AppRegistry, MapView } from 'react-native';
-//import MapView from 'react-native-maps';
+import { StyleSheet, AppRegistry } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 
 
 export default class mapsPractice extends Component {
@@ -40,12 +40,12 @@ export default class mapsPractice extends Component {
           initialRegion={{
           latitude: 45.78825,
           longitude: -122.4324,
-          latitudeDelta: 0.0009,
-          longitudeDelta: 0.0009
+          latitudeDelta: 0.0722,
+          longitudeDelta: 0.0421
           }}
        >
         {this.state.markers.map((marker) => {
-          return <Marker {...marker} />
+          return <MapView.Marker {...marker} />
         })}
       </MapView>
     );
